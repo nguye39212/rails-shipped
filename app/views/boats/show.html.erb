@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1> <%= @boat.name %></h1>
+
+<h4> <%= @boat.location %></h4>
+
+<h2> <%= @boat.containers %></h2>
+
+<% @boat.jobs.each do |jobs| %>
+   <p><%= link_to jobs.id, job_path(job) %></p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>
