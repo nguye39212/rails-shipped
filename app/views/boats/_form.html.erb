@@ -14,12 +14,18 @@
     <fieldset>
   <%= f.label :name %>
   <%= f.text_field :name %>
-
+  <br>
   <%= f.label :containers %>
   <%= f.number_field :containers %>
-
+  <br>
   <%= f.label :location %>
   <%= f.text_field :location %> 
+
+  <br>
+
+  <%= f.label :photo, "Upload Photo" %>
+  <%= f.file_field :photo %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

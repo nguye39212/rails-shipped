@@ -24,7 +24,7 @@ class BoatsController < ApplicationController
   # POST /boats
   # POST /boats.json
   def create
-    @boat = @current_user.boats.new(boat_params)
+    @boat = Boat.new(boat_params)
 
     respond_to do |format|
       if @boat.save
@@ -69,6 +69,6 @@ class BoatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boat_params
-      params.fetch(:boat, {}).permit(:name, :containers, :location)
+      params.fetch(:boat, {}).permit(:name, :containers, :location, :photo)
     end
 end

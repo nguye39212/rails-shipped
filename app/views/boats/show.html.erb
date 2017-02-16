@@ -5,6 +5,7 @@
 <h4> <%= @boat.location %></h4>
 
 <h2> <%= @boat.containers %></h2>
+<%= image_tag @boat.photo.url , size: '100x100' %>
 
 <% @boat.jobs.each do |jobs| %>
    <p><%= link_to jobs.id, job_path(job) %></p>
